@@ -1,0 +1,231 @@
+
+/* Базовые стили страницы */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #264a45;
+}
+
+.header {
+  padding: 32px 24px;
+  text-align: center;
+  background: #b3c7c7;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+}
+
+.header p {
+  margin: 0;
+  color: #588080;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.toolbar {
+  margin-bottom: 24px;
+}
+
+.toolbar__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #31b6af;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #31b6af;
+}
+
+button:focus-visible {
+  outline: 3px solid #8dfff6;
+  outline-offset: 3px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: #698a88;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 16px;
+  }
+
+  .header {
+    padding: 24px 16px;
+  }
+}
+
+/* Карточка виджета */
+.widget {
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e1e7f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(38, 51, 74, 0.06);
+}
+
+/* Верхняя панель карточки */
+.widget__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  background: #edfeff;
+  border-bottom: 1px solid #e1f0ef;
+}
+
+.widget__title {
+  margin: 0;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.widget__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.widget__controls button {
+  padding: 7px 10px;
+  font-size: 12px;
+}
+
+.widget__content {
+  padding: 16px;
+}
+
+.widget__content[hidden] {
+  display: none;
+}
+
+/* Формы и поля */
+.widget input[type="text"],
+.widget textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbe5de;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.widget input:focus-visible,
+.widget textarea:focus-visible {
+  outline: 3px solid #b8fff3;
+  outline-offset: 2px;
+}
+
+/* Список задач */
+.todo-form {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.todo-form input {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-counter {
+  color: #698a87;
+  font-size: 14px;
+}
+
+.todo-list {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.todo-item__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.todo-item__title--completed {
+  color: #89a3a4;
+  text-decoration: line-through;
+}
+
+.todo-item button {
+  flex-shrink: 0;
+  padding: 6px 9px;
+  background: #e8faf7;
+  color: #309e8f;
+}
+
+/* Цитата */
+.quote-text {
+  margin: 0 0 12px;
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.quote-author {
+  display: block;
+  margin-bottom: 16px;
+  color: #698a88;
+  text-align: right;
+}
+
+.quote-status {
+  color: #698a80;
+  font-size: 14px;
+}
+
+/* Дата и заметки */
+.widget__content p {
+  line-height: 1.5;
+}
+
+@media (max-width: 420px) {
+  .widget__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .todo-form {
+    flex-direction: column;
+  }
+}
